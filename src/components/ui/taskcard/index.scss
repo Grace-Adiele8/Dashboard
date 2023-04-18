@@ -1,0 +1,110 @@
+.task-card {
+  background: #ffffff;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.02);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  flex-direction: column;
+  display: flex;
+
+  &__image {
+    width: 100%;
+    height: 168px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    &__holder {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 18px;
+
+      &__title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+      }
+
+      &__description {
+        padding-bottom: 18px;
+      }
+    }
+    &__progress {
+      &__status {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .progress {
+        display: flex;
+        align-content: center;
+        gap: 4px;
+      }
+
+      .completed-value {
+        color: #000000;
+        line-height: 17px;
+      }
+    }
+
+    &__collarboration {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__comments {
+        display: flex;
+        gap: 2px;
+
+        padding-top: 11px;
+      }
+      .chats {
+        display: flex;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        align-items: center;
+        color: #b8b9bd;
+        gap: 2px;
+      }
+    }
+  }
+}
+.task-header {
+  background: #f4f6f8;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-bottom: 24px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+
+      color: #858a93;
+    }
+    &__number {
+      background: #000000;
+      border-radius: 4px;
+      padding: 8px 12px;
+      width: 35px;
+      height: 35px;
+    }
+    .number-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+
+      color: #ffffff;
+    }
+  }
+}

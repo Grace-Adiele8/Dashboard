@@ -1,0 +1,19 @@
+.slider {
+  border-radius: 24px;
+  height: 8px;
+
+  &--to-Do {
+    @extend .slider;
+    background: #ebebeb;
+  }
+
+  &--inprogress {
+    @extend .slider;
+    background: #ff5f37;
+  }
+
+  &--completed {
+    @extend .slider;
+    background: #8bc488;
+  }
+}
