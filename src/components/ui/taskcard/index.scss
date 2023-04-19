@@ -15,11 +15,12 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    margin-top: 18px;
+
     &__holder {
       display: flex;
       flex-direction: column;
       gap: 8px;
-      margin-top: 18px;
 
       &__title {
         font-weight: 600;
@@ -33,6 +34,10 @@
       }
     }
     &__progress {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
       &__status {
         display: flex;
         justify-content: space-between;
@@ -58,9 +63,7 @@
 
       &__comments {
         display: flex;
-        gap: 2px;
-
-        padding-top: 11px;
+        gap: 12px;
       }
       .chats {
         display: flex;
@@ -70,6 +73,10 @@
         align-items: center;
         color: #b8b9bd;
         gap: 2px;
+      }
+
+      .task-profile {
+        width: 56px;
       }
     }
   }

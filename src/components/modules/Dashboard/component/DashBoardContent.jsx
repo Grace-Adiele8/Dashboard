@@ -18,11 +18,11 @@ function DashBoardContent() {
     <div className="dash-board">
       <div className="dash-board__content">
         <div className="dash-board__content__campaign">
-          <div className="dash-board__content__info">
-            <h1 className=" dash-board__content__info__title">
+          <div className="dash-board__content__campaign__info">
+            <h1 className=" dash-board__content__campaign__info__title">
               New Campaign Run{" "}
             </h1>
-            <p className="dash-board__content__info__description">
+            <p className="dash-board__content__campaign__info__description">
               A new campaign launch work for brand new featur in May month
             </p>
           </div>
@@ -69,8 +69,12 @@ function DashBoardContent() {
       <div className="dash-board__content__task">
         <div className="dash-board__content__task__progress">
           <TaskHeader title="To Do" number="2" />
-          <TaskCard image={dribble} title="Highfidelity Design" />
-          <TaskCard title="Usability testing" />
+          <TaskCard
+            image={dribble}
+            title="Highfidelity Design"
+            variant="to-Do"
+          />
+          <TaskCard title="Usability testing" variant="to-Do" />
           <BaseButton className="base-button--secondary">
             <SvgPlus />
             Add Task
@@ -78,7 +82,11 @@ function DashBoardContent() {
         </div>
         <div className="dash-board__content__task__progress">
           <TaskHeader title="Inprogress" number="1" />
-          <TaskCard image={anais} title="Highfidelity Design" />
+          <TaskCard
+            image={anais}
+            title="Highfidelity Design"
+            variant="inprogress"
+          />
           <BaseButton className="base-button--secondary">
             <SvgPlus />
             Add Task
@@ -86,8 +94,12 @@ function DashBoardContent() {
         </div>
         <div className="dash-board__content__task__progress">
           <TaskHeader title="Inprogress" number="1" />
-          <TaskCard title="Usability testing" />
-          <TaskCard image={camplog} title="Highfidelity Design" />
+          <TaskCard title="Usability testing" variant="completed" />
+          <TaskCard
+            image={camplog}
+            title="Highfidelity Design"
+            variant="completed"
+          />
 
           <BaseButton className="base-button--secondary">
             <SvgPlus />

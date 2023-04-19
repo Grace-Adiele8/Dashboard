@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 
-function Slider({ className = "", variant = "inprogress" }) {
+function Slider({ className = "", variant }) {
   return <div className={`slider--${variant} ${className} `}></div>;
 }
 

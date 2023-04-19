@@ -9,7 +9,18 @@
 
   &--inprogress {
     @extend .slider;
-    background: #ff5f37;
+    background: #ebebeb;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 45%;
+      background: #ff5f37;
+      border-bottom-left-radius: 24px;
+      border-top-left-radius: 24px;
+    }
   }
 
   &--completed {

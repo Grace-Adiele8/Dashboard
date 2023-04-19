@@ -6,8 +6,9 @@ import SvgMore from "../icon/SvgMore";
 import SvgCheckList from "../icon/SvgCheckList";
 import SvgChatDot from "../icon/SvgChatDot";
 import SvgLink from "../icon/SvgLink";
+import Slider from "../slider/Slider";
 
-function TaskCard({ title, image }) {
+function TaskCard({ title, image, variant }) {
   return (
     <div className="task-card">
       {image ? (
@@ -33,6 +34,7 @@ function TaskCard({ title, image }) {
           </p>
           <p className="completed-value">2/10</p>
         </div>
+        <Slider {...{ variant }} />
         <div className="task-card__content__collarboration">
           <div className="task-card__content__collarboration__comments">
             <p className="chats">
@@ -48,7 +50,7 @@ function TaskCard({ title, image }) {
               2
             </p>
           </div>
-          <ProfileStack size={24} />
+          <ProfileStack size={24} className="task-profile" />
         </div>
       </div>
     </div>
