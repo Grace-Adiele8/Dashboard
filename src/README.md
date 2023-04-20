@@ -6,7 +6,7 @@ A responsive dashboard design project
 
     -npm create vite@latest . 
     -npm install
-    -npm run dev.
+    -npm run dev
 
 ## Technology used 
   Project is created with 
@@ -17,6 +17,7 @@ A responsive dashboard design project
 This project was created using Vite as it is a modern build tool and development server designed to make web development faster and more efficient. SCSS was used also for styling in order to make my code more structured and preventing duplications.I took into consideration the style guide provided and each components were created accordingly, flexbox and grid was used to make a responsive design project. I took into consideration coercion and separation of concerns while architecting my project folder. 
 
 ## Difficulties
+   Difficultly in my font weight changing
 
 
 ## Demo link
