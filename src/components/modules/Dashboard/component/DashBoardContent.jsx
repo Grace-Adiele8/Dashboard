@@ -68,7 +68,7 @@ function DashBoardContent() {
 
       <div className="dash-board__content__task">
         <div className="dash-board__content__task__progress">
-          <TaskHeader title="To Do" number="2" />
+          <TaskHeader title="To Do" number="3" />
           <TaskCard
             image={dribble}
             title="Highfidelity Design"
@@ -93,7 +93,7 @@ function DashBoardContent() {
           </BaseButton>
         </div>
         <div className="dash-board__content__task__progress">
-          <TaskHeader title="Inprogress" number="1" />
+          <TaskHeader title="Completed" number="2" />
           <TaskCard title="Usability testing" variant="completed" />
           <TaskCard
             image={camplog}
