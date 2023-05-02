@@ -12,6 +12,7 @@ import TaskCard from "../../../ui/taskcard/TaskCard";
 import dribble from "../../../../assets/images/dribble.png";
 import camplog from "../../../../assets/images/camplog.png";
 import anais from "../../../../assets/images/Anais.png";
+import SvgDropDown from "../../../ui/icon/SvgDropDown";
 
 function DashBoardContent() {
   return (
@@ -26,7 +27,7 @@ function DashBoardContent() {
               A new campaign launch work for brand new featur in May month
             </p>
           </div>
-          <BaseButton className="base-button--alternate">
+          <BaseButton className="base-button--alternate dashboard-button">
             ADD MEMBERS
           </BaseButton>
         </div>
@@ -34,6 +35,14 @@ function DashBoardContent() {
           <div className="dash-board__content__profile__members">
             <ProfileStack size={32} className="profile-image" />
             <p className="members">8 member</p>
+          </div>
+          <div className="dash-board__content__profile__option">
+            <button>
+              Menu
+              <span>
+                <SvgDropDown />
+              </span>
+            </button>
           </div>
           <div className="dash-board__content__profile__menu">
             <a href="/" className="menu-links">
