@@ -17,9 +17,18 @@ function SideBar() {
     setNav(!nav);
   };
 
+  const handleDashboardBackground = () => {
+    setNav(!nav);
+  };
+
   return (
     <>
-      <div className="mobile-nav">
+      <button
+        onClick={handleDashboardBackground}
+        className={`dashboard-background ${nav ? "blur" : ""}`}
+      ></button>
+
+      <div className={`mobile-nav ${nav ? "mobile-active" : "mobile-nav"}`}>
         <button
           onClick={handleToggle}
           className={`menu ${nav ? "handleToggle" : ""}`}
@@ -58,7 +67,15 @@ function SideBar() {
             />
           </svg>
         </button>
-        <BaseButton className="base-button--alternate">ADD MEMBERS</BaseButton>
+        <BaseButton variant="alternate" className="mobile-nav__button">
+          ADD MEMBERS
+        </BaseButton>
+        <div className="add-members">
+          <button className="add-button">
+            <SvgPlus />
+          </button>
+          <div className="add-tool-tip">ADD MEMBERS</div>
+        </div>
       </div>
       <div className={`side-bar ${nav ? "mobile" : ""}`}>
         <div className="side-bar__content">

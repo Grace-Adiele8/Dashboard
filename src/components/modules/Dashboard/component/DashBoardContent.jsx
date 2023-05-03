@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BaseButton from "../../../ui/basebutton/BaseButton";
 import ProfileStack from "../../../ui/profilestack/ProfileStack";
 import SvgUsers from "../../../ui/icon/SvgUsers";
@@ -15,6 +15,12 @@ import anais from "../../../../assets/images/Anais.png";
 import SvgDropDown from "../../../ui/icon/SvgDropDown";
 
 function DashBoardContent() {
+  const [menu, setMenu] = useState(false);
+
+  const handleClick = () => {
+    setMenu(!menu);
+  };
+
   return (
     <div className="dash-board">
       <div className="dash-board__content">
@@ -37,12 +43,43 @@ function DashBoardContent() {
             <p className="members">8 member</p>
           </div>
           <div className="dash-board__content__profile__option">
-            <button>
+            <button
+              onClick={handleClick}
+              className={`${menu ? handleClick : ""}`}
+            >
               Menu
               <span>
                 <SvgDropDown />
               </span>
             </button>
+            <div className={`options-menu ${menu ? "active" : ""}`}>
+              <a href="/" className="menu-links">
+                <span>
+                  <SvgUsers />
+                </span>
+                Participants View
+              </a>
+
+              <a href="/" className="menu-links">
+                <span>
+                  <SvgBoard />
+                </span>
+                Board View
+              </a>
+              <a href="/" className="menu-links">
+                <span>
+                  <SvgList />
+                </span>
+                List View
+              </a>
+              <a href="/" className="menu-links">
+                <span>
+                  <SvgLightening />
+                </span>
+                Power View
+              </a>
+              <SvgPlus className="menu-links" />
+            </div>
           </div>
           <div className="dash-board__content__profile__menu">
             <a href="/" className="menu-links">

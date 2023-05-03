@@ -9,7 +9,7 @@ function SvgDropDown() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M13.5 6.75L9 11.25L4.5 6.75" stroke="#030640" strokeWidth="2" />
+      <path d="M13.5 6.75L9 11.25L4.5 6.75" stroke="#7d8088" strokeWidth="2" />
     </svg>
   );
 }

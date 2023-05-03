@@ -29,6 +29,12 @@
           line-height: 46px;
           padding-bottom: 4px;
           color: #000000;
+
+          @include mobile(700px) {
+            font-size: 24px;
+            line-height: 32px;
+            padding-bottom: 8px;
+          }
         }
         &__description {
           font-weight: 400;
@@ -58,10 +64,47 @@
         }
       }
 
-      &__option button {
-        padding: 12px 16px;
-        align-items: center;
-        display: flex;
+      &__option {
+        position: relative;
+        display: none;
+
+        @include mobile(1004px) {
+          display: block;
+        }
+        button {
+          padding: 12px 16px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          color: #7d8088;
+          display: flex;
+          gap: 8px;
+          background: #f2f4f5;
+          border-radius: 8px;
+        }
+
+        .options-menu {
+          position: absolute;
+          right: 0;
+          top: 50px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          background: #fff;
+          padding: 20px;
+          width: max-content;
+          gap: 18px;
+          opacity: 0;
+
+          .menu-links {
+            display: flex;
+            gap: 4px;
+          }
+        }
+
+        .active {
+          opacity: 1;
+        }
       }
 
       &__menu {
@@ -71,10 +114,18 @@
         color: #7d8088;
         font-weight: 500;
 
+        @include mobile(1004px) {
+          display: none;
+        }
+
         .menu-links {
           display: flex;
           gap: 4px;
           color: #7d8088;
+
+          span {
+            display: flex;
+          }
         }
       }
     }
@@ -84,7 +135,7 @@
       padding-right: 64px;
       padding-top: 64px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 40px;
       padding-bottom: 76px;
 
